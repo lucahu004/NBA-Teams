@@ -16,13 +16,14 @@ export class AppComponent {
   
 
   constructor(public http: HttpClient) {
-    this.makeTypedRequest()
+    this.makeTypedRequest();
   }
 
   makeTypedRequest() : void
   {
+    
     this.oServiceResponse = this.http.get<ServiceResponse>(this.serviceURL);
-    this.oServiceResponse.subscribe(d => {this.teams = d.data;});
+    this.oServiceResponse.subscribe(d => {this.teams = d.data; alert('ciao');});
   } 
 }
 
