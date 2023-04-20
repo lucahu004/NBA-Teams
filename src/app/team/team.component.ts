@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Team } from '../models/team.model';
 
 @Component({
@@ -7,4 +7,5 @@ import { Team } from '../models/team.model';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent {
+  @Input() team: Team;
 }
