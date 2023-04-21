@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   teams: Team[];
   oServiceResponse: Observable<ServiceResponse>;
-  serviceURL: 'https://www.balldontlie.io/api/v1/teams/';
+  serviceURL: string = 'https://www.balldontlie.io/api/v1/teams/';
   
 
   constructor(public http: HttpClient) {
@@ -23,7 +23,7 @@ export class AppComponent {
   {
     
     this.oServiceResponse = this.http.get<ServiceResponse>(this.serviceURL);
-    this.oServiceResponse.subscribe(d => {this.teams = d.data; alert('ciao');});
+    this.oServiceResponse.subscribe(d => {this.teams = d.data;});
   } 
 }
 

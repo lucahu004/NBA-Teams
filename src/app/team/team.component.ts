@@ -8,4 +8,13 @@ import { Team } from '../models/team.model';
 })
 export class TeamComponent {
   @Input() team: Team;
+  displayedColumns: string[] = [
+    'id',
+    'abbreviation',
+    'city',
+    'conference',
+    'division',
+    'full_name',
+    'name',
+  ];
 }
